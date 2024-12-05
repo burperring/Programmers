@@ -11,7 +11,8 @@ vector<int> solution(string s) {
     for(int i = 0; i < s.length(); i++){
         if(m.find(s[i]) != m.end()){
             int x = m.find(s[i])->second;
-            m.find(s[i])->second = i;
+            m[s[i]] = i;
+            //m.find(s[i])->second = i;
             answer.push_back(i - x);
         }
         else{
